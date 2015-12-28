@@ -1,0 +1,28 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+ 
+<web-app>
+	<display-name>ezweb framework sample</display-name>
+	<filter>
+		<filter-name>webFilter</filter-name>
+		<filter-class>com.ergal.ezweb.core.WebFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>webFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+        <listener-class>com.ergal.ezweb.example.pages.ContextListenerExample</listener-class>
+    </listener>
+    <servlet>
+		<servlet-name>VerifyImage</servlet-name>
+		<display-name>VerifyImage</display-name>
+		<description></description>
+		<servlet-class> com.ergal.ezweb.example.pages.VerifyImage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyImage</servlet-name>
+		<url-pattern>/VerifyImage</url-pattern>
+	</servlet-mapping>
+</web-app>

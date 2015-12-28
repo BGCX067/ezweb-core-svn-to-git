@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>迭代示例</title>
+</head>
+<body>
+	<div>
+		<ul>
+			<div>迭代示例1 String类型</div>
+			@Iterator(name=articles, var="article")
+			<li>${article}</li>
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<div>迭代示例2 对象类型</div>
+			@Iterator(name=blogs, var="blog")
+			<li>${blog.blogName}  ${blog.blogContent} </li>
+		</ul>
+	</div>
+</body>
+</html>

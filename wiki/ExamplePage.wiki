@@ -1,0 +1,30 @@
+//获取ftp的配置部分
+Properties globalProp = EzwebPropertyFactory.getGlobalProperties();
+
+
+int ftpcachesize =
+Integer.parseInt(globalProp.getProperty(Constant.EZWEB_FTP_CACHE_SIZE).trim());
+
+
+String ftpCacheDir = globalProp.getProperty(Constant.EZWEB_FTP_CACHE_DIR).trim();
+
+
+页面间的跳转 只要在上一个页面对象中和下一个页面对象中有相同的field就可以了
+
+加上@P2PScope
+	
+
+比如
+
+        @P2PScope
+	private String message;
+
+系统会自动复制到下一个页面的field中
+
+
+注入request和response
+
+需要在page中
+
+@Inject
+HttpServletRequest request;
